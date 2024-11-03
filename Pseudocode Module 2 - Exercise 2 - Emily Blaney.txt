@@ -1,0 +1,35 @@
+Exercise 2
+
+START
+
+// Housekeeping: Declare variables
+DECLARE accountBalance AS FLOAT
+DECLARE overDrawnFee AS FLOAT
+DECLARE numberOfOverdrawn AS INTEGER
+DECLARE fee AS FLOAT
+DECLARE newAccountBalance AS FLOAT
+
+// Collect input from the user
+OUTPUT "Enter your account balance: "
+INPUT accountBalance
+
+OUTPUT "Enter the number of times the account was overdrawn: "
+INPUT numberOfOverdrawn
+
+// Calculate the fee
+IF accountBalance < 0 THEN
+    // Calculate the fee for overdraft
+    fee = (0.01 * accountBalance) - (5 * numberOfOverdrawn)
+ELSE
+    fee = 0 // No fee if the account is not overdrawn
+END IF
+
+// Compute the new account balance
+newAccountBalance = accountBalance - fee
+
+// Step 4: Display the results
+OUTPUT "The calculated fee is: ", fee
+OUTPUT "Your new account balance is: ", newAccountBalance
+OUTPUT "Thanks for using this program!"
+
+END
