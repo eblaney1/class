@@ -1,0 +1,15 @@
+start
+	retrieve questions if available
+		contestant picks category and dollar amount
+		trivia clues are asked
+		while the timer hasn't run out
+			contestant buzzes in and answers
+			if answer is correct
+				contestant earns dollar amount
+			else
+				contestant loses dollar amount
+				time decreases
+			endif
+		endwhile
+	endwhile
+return
